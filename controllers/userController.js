@@ -61,7 +61,7 @@ exports.otpVerify = catchAsync(async (req, res, next) => {
   if (!user) {
     return next(new AppError("Mobile Number is not found in DB!", 404));
   }
-  if (user.otp !== req.body.otp) {
+  if (parseInt(user.otp) !== req.body.otp) {
     return next(new AppError("Invalid OTP!", 401));
   }
 

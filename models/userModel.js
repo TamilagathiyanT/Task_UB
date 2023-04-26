@@ -15,7 +15,6 @@ const userSchema = new mongoose.Schema({
   },
   otp: {
     type: Number,
-    select: false,
   },
   createdAt: {
     type: Date,
